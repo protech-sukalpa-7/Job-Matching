@@ -2,6 +2,7 @@ import pandas as pd
 
 def load_jobs():
     df = pd.read_csv("data.csv")
+
     df.columns = df.columns.str.strip().str.lower()
 
     if "job title" in df.columns:
@@ -16,6 +17,10 @@ def load_jobs():
     else:
         raise Exception("Description column not found")
 
-    df["job_description"] = df[title] + " " + df[desc]
+    df["job_description"] = df[title].astype(str) + " " + df[desc].astype(str)
+
+    df = df.drop_duplicates(subset=["job_description"])
+
+    df = df.dropna(subset=["job_description"])
 
     return df[["job_description"]]
