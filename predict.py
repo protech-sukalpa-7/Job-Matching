@@ -23,6 +23,14 @@ def match_jobs(resume_text):
             "score": round(score, 3)
         })
 
-    results = sorted(results, key=lambda x: x["score"], reverse=True)
+    unique_results = []
+    seen = set()
+
+    for r in results:
+        if r["job_description"] not in seen:
+            unique_results.append(r)
+            seen.add(r["job_description"])
+
+    results = sorted(unique_results, key=lambda x: x["score"], reverse=True)
 
     return results[:10]
