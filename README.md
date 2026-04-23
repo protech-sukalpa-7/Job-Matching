@@ -149,9 +149,9 @@ DevOps engineer skilled in Docker, Kubernetes, AWS, Linux, CI/CD pipelines, depl
 
 ## 10. Project Link
 
-GitHub Repository: [[Add Your GitHub Repository Link Here]](https://github.com/protech-sukalpa-7/Job-Matching)
+GitHub Repository:- https://github.com/protech-sukalpa-7/Job-Matching
 
-Live Demo: https://job-matching-08z2.onrender.com/
+Live Demo: https:- //job-matching-08z2.onrender.com/
 ---
 
 ## 11. Future Improvements
